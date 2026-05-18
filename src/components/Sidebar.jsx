@@ -4,7 +4,6 @@ const navItems = [
   { id: "main", label: "Main", icon: Home },
   { id: "analysis", label: "Analysis", icon: BarChart2 },
   { id: "monitor", label: "Monitor", icon: Monitor },
-  { id: "settings", label: "Settings", icon: Settings },
   { id: "test", label: "Test", icon: FlaskConical },
 ];
 
@@ -67,6 +66,13 @@ export default function Sidebar({ active, setActive, onLogout }) {
             <span style={{ fontSize: 12, fontWeight: 600, color: "#15803d" }}>All systems nominal</span>
           </div>
         </div>
+        <button
+          className={`nav-link${active === "settings" ? " active" : ""}`}
+          onClick={() => setActive("settings")}
+        >
+          <Settings size={15} />
+          Settings
+        </button>
         <button className="nav-link" onClick={onLogout} style={{ color: "#ef4444" }}>
           <LogOut size={14} />
           Log out
