@@ -16,7 +16,12 @@ import {
 } from "lucide-react";
 import podImage from "../assets/pod_mode1.png";
 
-
+const stats = [
+  { label: "Current Hotspot", value: "95.2 °C", sub: "at frame t_200", icon: Thermometer, color: "#2563eb", bg: "#eff6ff" },
+  { label: "POD Energy", value: "99.99%", sub: "4 retained modes", icon: Layers, color: "#7c3aed", bg: "#f5f3ff" },
+  { label: "Overall MAE", value: "1.25 °C", sub: "field accuracy", icon: TrendingUp, color: "#059669", bg: "#ecfdf5" },
+  { label: "Hotspot MAE", value: "2.39 °C", sub: "peak error", icon: AlertTriangle, color: "#d97706", bg: "#fffbeb" },
+];
 
 const pipeline = [
   {
