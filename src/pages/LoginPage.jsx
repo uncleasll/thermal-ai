@@ -68,30 +68,7 @@ export default function LoginPage({ onLogin }) {
           </div>
         </div>
 
-        <div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", gap: 10 }}>
-          {[
-            { icon: Zap, label: "Sub-second reconstruction", desc: "Full field from 2 sensors" },
-            { icon: Activity, label: "Mean error < 2.5 °C", desc: "Production-validated accuracy" },
-            { icon: Shield, label: "Live monitoring", desc: "Configurable alert thresholds" },
-          ].map(({ icon: Icon, label, desc }) => (
-            <div key={label} style={{
-              display: "flex", alignItems: "center", gap: 14,
-              background: "rgba(255,255,255,0.04)", borderRadius: 11,
-              border: "1px solid rgba(255,255,255,0.07)", padding: "12px 16px"
-            }}>
-              <div style={{
-                width: 32, height: 32, borderRadius: 8,
-                background: "rgba(37,99,235,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
-              }}>
-                <Icon size={15} color="#60a5fa" />
-              </div>
-              <div>
-                <div style={{ color: "#f1f5f9", fontWeight: 600, fontSize: 13 }}>{label}</div>
-                <div style={{ color: "#64748b", fontSize: 12 }}>{desc}</div>
-              </div>
-            </div>
-          ))}
-        </div>
+
 
         <div style={{ position: "relative", zIndex: 1, fontSize: 11, color: "#334155" }}>
           COMSOL · PCA/POD · LSTM · v2.4.1
