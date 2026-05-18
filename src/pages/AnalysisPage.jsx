@@ -186,7 +186,11 @@ export default function AnalysisPage() {
             </span>
             <span className="tag tag-blue" style={{ marginLeft: "auto" }}>Interactive</span>
           </div>
-          <InteractiveSensorMap hotspot={95} />
+          <img
+            src={podImage}
+            alt="2D Thermal Field — POD Mode 1"
+            style={{ maxHeight: 680, width: "auto", display: "block", margin: "0 auto", borderRadius: 10 }}
+          />
         </div>
       )}
 
