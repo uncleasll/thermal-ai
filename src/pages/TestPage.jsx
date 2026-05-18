@@ -174,10 +174,14 @@ export default function TestPage() {
             <CartesianGrid stroke="#f1f5f9" />
             <XAxis dataKey="time" tick={{ fontSize: 10, fill: "#94a3b8" }} />
             <YAxis tick={{ fontSize: 10, fill: "#94a3b8" }} domain={[60, 110]} />
-            <Tooltip contentStyle={{ borderRadius: 9, border: "1px solid #e2e8f0", fontSize: 12 }} formatter={v => [`${v.toFixed(1)}°C`]} />
-            <Legend wrapperStyle={{ fontSize: 12 }} />
-            <Line type="monotone" dataKey="true" stroke="#0f172a" strokeWidth={2} dot={false} name="True" />
-            <Line type="monotone" dataKey="reconstructed" stroke="#2563eb" strokeWidth={2} strokeDasharray="5 3" dot={false} name="Reconstructed" />
+            <Tooltip
+              contentStyle={{ borderRadius: 10, border: "1px solid #e2e8f0", fontSize: 12 }}
+              formatter={(v, name) => [`${v.toFixed(1)} °C`, name === "true" ? "True" : "Reconstructed"]}
+              labelFormatter={l => `Time: ${l} s`}
+            />
+            <Legend wrapperStyle={{ fontSize: 12, paddingTop: 8 }} formatter={name => name === "true" ? "True" : "Reconstructed"} />
+            <Line type="monotone" dataKey="true" stroke="#dc2626" strokeWidth={2.5} dot={false} name="true" />
+            <Line type="monotone" dataKey="reconstructed" stroke="#2563eb" strokeWidth={2.5} strokeDasharray="5 3" dot={false} name="reconstructed" />
           </LineChart>
         </ResponsiveContainer>
       </div>
