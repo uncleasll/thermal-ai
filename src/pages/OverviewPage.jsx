@@ -138,24 +138,7 @@ export default function OverviewPage() {
         </div>
       </div>
 
-      {/* Stats */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: 12 }}>
-        {stats.map((s, i) => (
-          <div key={s.label} className="stat-card animate-fade-up" style={{ animationDelay: `${i * 0.06}s` }}>
-            <div style={{
-              width: 36, height: 36, borderRadius: 9, background: s.bg,
-              display: "flex", alignItems: "center", justifyContent: "center",
-            }}>
-              <s.icon size={17} color={s.color} />
-            </div>
-            <div style={{ fontFamily: "DM Mono, monospace", fontSize: 22, fontWeight: 500, color: "#0f172a", marginTop: 4 }}>
-              {s.value}
-            </div>
-            <div style={{ fontSize: 13, fontWeight: 700, color: "#334155" }}>{s.label}</div>
-            <div style={{ fontSize: 11, color: "#94a3b8" }}>{s.sub}</div>
-          </div>
-        ))}
-      </div>
+
 
       {/* Study Overview + Significance */}
       <div style={{ display: "grid", gridTemplateColumns: "1.15fr 0.85fr", gap: 14, alignItems: "stretch" }}>
